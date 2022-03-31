@@ -1,0 +1,68 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		console.log("5i" === "5")
+	</script>
+</head>
+<body>
+
+</body>
+</html>
+	== -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function validate(){
+			var username= document.getElementById("username").value;
+			var mobile =document.getElementById("mobile").value;
+			var email=document.getElementById("email").value;
+			var usernameCheck=/^[a-zA-Z]+$/;
+			var mobileCheck=/^\+[789]\d{9}$/;
+			var emailCheck=/^[a-z0-9]+\@[a-z]+\.[a-z]{2,3}$/;
+						   //ramteja   @gmail. com
+			if(username=="" || username.length<3){
+				console.log("Please enter u'r name");
+
+				return false
+			}
+			if(!username.match(usernameCheck)){
+				alert("Name must carry only aplabets");
+				return false
+			}
+			if(mobile==""){
+				alert("Pls check your number");
+				return false;
+			}
+			if(!mobile.match(mobileCheck)){
+				alert("Mobile number is not saving in a proper condition");
+				return false
+			}
+			if(!email.match(emailCheck)){
+				alert("Provide a valid email address");
+				return false;
+			}
+			return true
+		}
+	</script>
+	<style type="text/css">
+		.novisible{
+			display: none
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="return validate()">
+		<p><input id="username" type="text" placeholder="Enter a name"/></p>
+		<p class="novisible">Enter a name</p>
+		<p><input type="text" placeholder="Enter phone number" id="mobile"></p>
+		<p><input type="email" placeholder="Enter your email id" id="email"></p>
+		<button>Save</button>
+	</form>
+</body>
+</html>
