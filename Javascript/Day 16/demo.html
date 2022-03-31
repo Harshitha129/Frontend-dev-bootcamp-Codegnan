@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=[12,"hello",876,"javascript","demo"],x;
+		console.log("before the operation",a);
+		console.log(a[0])
+		console.log(a[1])
+		console.log(a[2])
+		console.log(a.length)
+		for(x=0;x<a.length;x++)
+			console.log(a[x])
+		a.push("maths")
+		a.pop()
+		a.unshift(5,"marvel")
+		a.shift()
+		a.splice(2,1,"Reactjs","HTML")
+		console.log("after the operation",a)
+	</script>
+</body>
+</html>
+
+<!--
+array_variable.splice(at which position,count of deleting values,new values to add)

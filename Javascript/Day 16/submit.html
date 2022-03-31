@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p{
+			border:1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+		function goToHell(){
+			var a=3,b=23;
+			alert(a+b) 
+		}
+		function tell(){
+			console.log("INTRUDER")
+		}
+		function handleChange(){
+			console.log("function get triggered")
+		}
+	</script>
+</head>
+<body>
+	<input onchange="handleChange()" type="text" placeholder="Enter a value"/>
+	<textarea ></textarea>
+	 <p onmouseout="tell()">This is a paragraph element</p> 
+	<button onclick="goToHell()">Submit</button>
+</body>
+</html>
+
+<!--
+
+onclick
+onchange
+onsubmit
+
+
+
+onkeypress
+onmouseover
+onmouseout
