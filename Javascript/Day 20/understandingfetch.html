@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Understanding fetch in JavaScript</h1>
+	<h2>User</h2>
+	<p id="user"></p>
+	<button onclick="retrieve()">Bring data</button>
+	<script>
+		var s;
+		function retrieve(){
+			fetch("http://localhost:5000/getData")
+			.then(function(response){
+				return response.json();
+			})
+			.then(function(resJson){
+				s=resJson
+				display(s);
+			})
+		}
+		function display(data){
+			console.log("from display function using console with data",data)
+			for(var w=0;w<data.length;w++){
+				document.getElementById("user").innerHTML+=`<p>Name ${data[w].user}</p>`
+				document.getElementById("user").innerHTML+=`<p>Age ${data[w].age}</p>`
+				document.getElementById("user").innerHTML+=`<p>Image <img src="${data[w].image}" alt="user image" width="5%"/></p>`
+			}
+		}													
+	</script>
+</body>
+</html>
+
+<!--
+
+function add(a,b){
+	return a+b
+}
+
+var d = add(2,4);					
+console.log(d)
