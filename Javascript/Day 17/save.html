@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.col{
+			color:red;
+		}
+	</style>
+	<script type="text/javascript">
+		function save(){
+			var d=document.getElementById("one").value;
+			var s=document.getElementById("two").value
+			console.log(d,s);
+			var p=document.getElementsByClassName("take")
+			console.log(p);
+			console.log(p[0].innerHTML)
+			console.log(p[1].innerHTML)
+			var b=document.getElementsByTagName("li");
+			console.log(b);
+			console.log(b[0].innerHTML)
+			for(i=0;i<b.length;i++)
+				console.log(b[i].innerHTML)
+			var i=document.createElement("input");
+			document.body.appendChild(i);
+			var f=document.getElementById("demo");
+			f.setAttribute("type","number")
+			var a=document.getElementById("a");
+			a.setAttribute("class","col")
+		}
+	</script>
+</head>
+<body>
+	<p id="a">This is paragraph one</p>
+	<h1 class="take">This is paragraph two</h1>
+	<ul>
+		<li>apple</li>
+		<li>mango</li>
+		<li>banana</li>
+		<li>pineapple</li>
+		<li>strawberry</li>
+	</ul>
+	<input id="demo">
+	<!-- <input id="one" type="text" placeholder="Enter a value" />
+	<input id="two" type="text"/> -->
+	<button onclick="save()">Save</button>
+</body>
+</html>
